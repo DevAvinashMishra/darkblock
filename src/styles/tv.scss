@@ -1,0 +1,100 @@
+.tv-title {
+  font-family: abril-display, serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: #000000;
+  margin-top: 85px;
+  font-size: 36px;
+}
+
+// .tv-login{
+//     text-align: center;
+// }
+
+.tv-app-text{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.tv-success-text{
+    font-family: abril-display, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 36px;
+    text-align: center;
+    width: 75%;
+    line-height: 44px;
+    display: block;
+    margin: auto;
+}
+
+.tv-success{
+    // display: flex;
+    padding-top: 85px;
+    justify-content: center;
+    width: fit-content;
+    display: block;
+    margin: auto;
+}
+
+.tv-code {
+  display: flex;
+  justify-content: center;
+
+  ::placeholder {
+    font-size: 16px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+
+    input[type="text"] {
+      font-family: neue-haas-grotesk-text, sans-serif;
+      font-size: 16px;
+    }
+  }
+}
+
+.tv-button {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #ffc324;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 16px;
+  border-radius: 4px;
+  margin-top: 24px;
+}
+
+.pin-input {
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-size: 16px;
+  background-color: #eaeaea;
+  outline: none;
+  border: 1px solid #9a9a9a;
+  color: #565555;
+  border-radius: 4px;
+}
+
+.tv-meta{
+  text-align: center;
+  margin: 40px 0px;
+  color: #565555;
+}
+
+.tv-height{
+  @media (max-width:2560px) and (min-width:1440px) {
+    height: 1600px;
+}
+
+  @media only screen and (max-width:1440px){
+    height: 600px;
+  }
+}
