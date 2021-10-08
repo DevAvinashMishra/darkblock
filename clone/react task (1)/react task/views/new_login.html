@@ -1,0 +1,67 @@
+<div class="container">
+    <header>
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+    </header>
+    <main>
+        <div class="left"></div>
+        <div class="middle">
+            <div class="login-wrapper">
+                <div class="login">
+                    <h2>Login</h2>
+                    <input type="text" placeholder="Email" name="email" id="txtEmailLogin">
+                    <input type="password" placeholder="Password" name="password" id="txtPassLogin">
+                    <input type="button" value="submit" id="btnLogin">
+                </div>
+                <div class="register">
+                    <h2>Sign up</h2>
+                    <input type="text" placeholder="Name" name="name" id="txtNameRegister">
+                    <input type="text" placeholder="Email" name="email" id="txtEmailRegister">
+                    <input type="password" placeholder="Password" name="password" id="txtPassRegister">
+                    <input type="password" placeholder="Repeat Password" name="password" id="txtPass2Register">
+                    <input type="button" value="submit" id="btnRegister">
+                </div>
+            </div>
+        </div>
+        <div class="right"></div>
+    </main>
+    <footer>
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right"></div>
+    </footer>
+</div>
+<script>
+    socket.on('user/login', (data) => {
+        console.log('login message from server:', data)
+        if (data.success) {
+            setToken(data.token);
+            navHome();
+        }
+    });
+    $('#btnLogin').click(e => {
+        socket.emit('user/login', {
+            token: getToken(),
+            email: $('#txtEmailLogin').val(),
+            password: $('#txtPassLogin').val(),
+        });
+    });
+
+    socket.on('user/register', (data) => {
+        console.log('register message from server:', data)
+        if (data.success) {
+            setToken(data.token);
+            navHome();
+        }
+    });
+    $('#btnRegister').click(e => {
+        socket.emit('user/register', {
+            token: getToken(),
+            username: $('#txtNameRegister').val(),
+            email: $('#txtEmailRegister').val(),
+            password: $('#txtPassRegister').val(),
+            password2: $('#txtPass2Register').val(),
+        });
+    });
+</script>

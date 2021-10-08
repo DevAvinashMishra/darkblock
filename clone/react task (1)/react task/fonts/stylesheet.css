@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Canela';
+    src: url('Canela-BlackItalic.eot');
+    src: url('Canela-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Canela-BlackItalic.woff2') format('woff2'),
+        url('Canela-BlackItalic.woff') format('woff'),
+        url('Canela-BlackItalic.svg#Canela-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('Canela-RegularItalic.eot');
+    src: url('Canela-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Canela-RegularItalic.woff2') format('woff2'),
+        url('Canela-RegularItalic.woff') format('woff'),
+        url('Canela-RegularItalic.svg#Canela-RegularItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('Canela-Bold.eot');
+    src: url('Canela-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Canela-Bold.woff2') format('woff2'),
+        url('Canela-Bold.woff') format('woff'),
+        url('Canela-Bold.svg#Canela-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('Canela-Light.eot');
+    src: url('Canela-Light.eot?#iefix') format('embedded-opentype'),
+        url('Canela-Light.woff2') format('woff2'),
+        url('Canela-Light.woff') format('woff'),
+        url('Canela-Light.svg#Canela-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('Canela-Black.eot');
+    src: url('Canela-Black.eot?#iefix') format('embedded-opentype'),
+        url('Canela-Black.woff2') format('woff2'),
+        url('Canela-Black.woff') format('woff'),
+        url('Canela-Black.svg#Canela-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('Canela-Medium.eot');
+    src: url('Canela-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Canela-Medium.woff2') format('woff2'),
+        url('Canela-Medium.woff') format('woff'),
+        url('Canela-Medium.svg#Canela-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Canela';
+    src: url('Canela-Regular.eot');
+    src: url('Canela-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Canela-Regular.woff2') format('woff2'),
+        url('Canela-Regular.woff') format('woff'),
+        url('Canela-Regular.svg#Canela-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

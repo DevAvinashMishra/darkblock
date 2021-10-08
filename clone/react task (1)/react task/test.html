@@ -1,0 +1,97 @@
+<script src="js/socket.io.min.js"></script>
+<script>
+    const socket = io("http://localhost:4000/");
+///////////////////// LOGIN
+        // listen for reply from server for login:
+        socket.on('user/login', (data) => {
+            console.log('login message from server:', data)
+            // if (data.success === 1) // woohoo
+            // else alert(data.error)
+        });
+        // dummy login:
+
+        // I click login button --> send this to server:
+            socket.emit('user/login', {
+                token: null,
+                email:'ilja@nevolin.be',
+                password:"123test123",
+            });
+        /////////////////////
+
+        
+        ///////////////////// REGISTER
+        // listen for reply from server for register:
+        socket.on('user/register', (data) => {
+            console.log('register message from server:', data)
+            // if (data.success === 1) // woohoo
+            // else alert(data.error)
+        });
+        // ...
+        // dummy register:
+
+        // I click register button --> send this to server:
+            socket.emit('user/register', {
+                token: '$2b$10$D0NL5qtxRdBkMfk0UJhvGOFMcpM4kxRtxBu.MA1u1YMCungEMxXKK_',
+                username: 'Lucky',
+                email:'luckyj@kakpo.be',
+                password:"123456",
+                pwdConfirm : "123456",
+            });
+        /////////////////////
+
+        ///////////////////// RECOVER
+        // listen for reply from server for recovering:
+        socket.on('user/recover', (data) => {
+            console.log('recovering message from server:', data)
+            // if (data.success === 1) // woohoo
+            // else alert(data.error)
+        });
+        // ...
+        // dummy recovering:
+
+        // I click recover button --> send this to server:
+            socket.emit('user/recover', {
+                token: null,
+                email:'lucky@kakpo.be',
+            });
+        /////////////////////
+
+        ///////////////////// SETTINGS
+        // listen for reply from server for settings:
+        socket.on('settings/update', (data) => {
+            console.log('settings message from server:', data)
+        });
+        // ...
+        // dummy settings message:
+
+        // I click recover button --> send this to server:
+            socket.emit('settings/update', {
+                token: '$2b$10$D0NL5qtxRdBkMfk0UJhvGOFMcpM4kxRtxBu.MA1u1YMCungEMxXKK',
+                form: { bible_verses:true, quotes:true},
+                email:'lucky@kakpo.be'
+            });
+        /////////////////////
+
+        ///////////////////// TODO UPDATE
+        // listen for reply from server for settings:
+        socket.on('todo/update', (data) => {
+            console.log('todo_update message from server:', data)
+        });
+        // ...
+        // dummy todo_update message:
+
+        // I click recover button --> send this to server:
+            socket.emit('todo/update', {
+                token: '$2b$10$D0NL5qtxRdBkMfk0UJhvGOFMcpM4kxRtxBu.MA1u1YMCungEMxXKK',
+                form: {
+                        today_excited: "Coding",
+                        main_todo: ["a", "b", "c"],
+                        secondary_todo: ["d","e","f","g","h"],
+                        water: 2,
+                        mood: 5,
+                        date : '08/09/2021'
+                    },
+                email:'lucky@kakpo.be'
+            });
+        /////////////////////
+</script>

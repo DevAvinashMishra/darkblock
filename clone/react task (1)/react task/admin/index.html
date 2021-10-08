@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Beatific Admin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- App css -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+		<link href="css/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+
+        <!-- third party css -->
+        <link href="libs/datatables.net-bs5/css/dataTables.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="libs/datatables.net-responsive-bs5/css/responsive.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="libs/datatables.net-buttons-bs5/css/buttons.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+        <link href="libs/datatables.net-select-bs5/css/select.bootstrap5.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- icons -->
+		<link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+
+    </head>
+
+    <!-- body start -->
+    <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "dark"}, "showRightSidebarOnPageLoad": true}'>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- Topbar Start -->
+
+        <div class="navbar-custom">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="images/logo-sm.png" alt="" height="22">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="images/logo-light.png" alt="" height="20">
+                        </span>
+                    </a>
+                </div>
+            
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                            <i class="fe-menu"></i>
+                        </button>
+                    </li>
+
+                    <li>
+                        <!-- Mobile menu toggle (Horizontal Layout)-->
+                        <a class="navbar-toggle nav-link" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                            <div class="lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                        <!-- End mobile menu toggle-->
+                    </li>   
+                    
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu">
+
+                <div class="h-100" data-simplebar>
+
+                    <!--- Sidemenu -->
+                    <div id="sidebar-menu">
+
+                        <ul id="side-menu">
+
+                            <li class="menu-title">Navigation</li>
+                
+                            <!-- <li>
+                                <a href="#">
+                                    <i data-feather="folder-plus"></i>
+                                    <span> page 1 </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-feather="folder-plus"></i>
+                                    <span> page 2 </span>
+                                </a>
+                            </li> -->
+
+                        </ul>
+
+                    </div>
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page-title-box">
+                                    <div class="page-title-right">
+                                        
+                                    </div>
+                                    <h4 class="page-title">Starter</h4>
+                                </div>
+                            </div>
+                        </div>       
+                        <!-- end page title --> 
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="header-title">Users</h4>
+                                        <p class="text-muted font-13 mb-4">
+                                            Showing users
+                                        </p>
+
+                                        <table id="key-datatable" class="table dt-responsive nowrap w-100">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Email</th>
+                                                    <th>Signup date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="users">
+                                            </tbody>
+                                        </table>
+
+                                    </div> <!-- end card body-->
+                                </div> <!-- end card -->
+                            </div><!-- end col-->
+                        </div>
+                        <!-- end row-->
+
+                        <div class="row">
+                            <div class="col-12 mb-2">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="quotes" style="height: 200px"></textarea>
+                                    <label for="quotes">Quotes</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-2">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="verses" style="height: 200px"></textarea>
+                                    <label for="verses">Bible verses</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-2">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="questions" style="height: 200px"></textarea>
+                                    <label for="questions">Main questions</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mb-1">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a comment here" id="backgrounds" style="height: 200px"></textarea>
+                                    <label for="backgrounds">Background URLs</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-2 bgthumbs">
+                            </div>
+                            <div class="col-12">
+                                <button id="save" type="submit" class="btn btn-lg btn-success waves-effect waves-light">Save changes</button>
+                            </div>
+                        </div>
+                        
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <script>document.write(new Date().getFullYear())</script> &copy; Made with love from Belgium 
+                            </div>
+                            <div class="col-md-6">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- Vendor js -->
+        <script src="js/vendor.min.js"></script>
+
+
+        <!-- third party js -->
+        <script src="libs/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="libs/datatables.net-bs5/js/dataTables.bootstrap5.min.js"></script>
+        <script src="libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="libs/datatables.net-responsive-bs5/js/responsive.bootstrap5.min.js"></script>
+        <script src="libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="libs/datatables.net-buttons-bs5/js/buttons.bootstrap5.min.js"></script>
+        <script src="libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+        <script src="libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+        <script src="libs/datatables.net-select/js/dataTables.select.min.js"></script>
+
+
+        <!-- App js -->
+        <script src="js/app.min.js"></script>
+
+
+        <script src="js/socket.io.min.js"></script>
+        <script>
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+
+            let socket;
+            if (window.location.host === '' || window.location.host.includes('localhost'))
+                socket = io("http://localhost:7790/");
+            else
+                socket = io("https://nevolin.be", {path: "/beatific/socket"});
+
+            function initTable() {
+                $("#key-datatable").DataTable({
+                    keys: !0,
+                    language: {
+                        paginate: {
+                            previous: "<i class='mdi mdi-chevron-left'>",
+                            next: "<i class='mdi mdi-chevron-right'>"
+                        }
+                    },
+                    drawCallback: function() {
+                        $(".dataTables_paginate > .pagination").addClass("pagination-rounded")
+                    }
+                });
+            }
+            socket.on('admin/users/get', data => {
+                console.log('admin/users/get:', data)
+                if (data.error) return;
+                for (const user of data.users) {
+                    let tr = $(`<tr></tr>`)
+                    tr.append(`<td>${user.name}</td>`)
+                    tr.append(`<td>${user.email}</td>`)
+                    tr.append(`<td>${user.date.split('.')[0].split('T').join(' - ')}</td>`)
+                    $('.users').append(tr)
+                }
+                initTable();
+            })
+            socket.emit('admin/users/get', {token:urlParams.get('token'), page:1});
+
+            socket.on('admin/settings/update', data => {
+                console.log('admin/settings/update', data)
+                if (data.error) return;
+            });
+            socket.on('admin/settings/get', data => {
+                console.log('admin/settings/get', data)
+                if (data.error) return;
+                $('#quotes').val( data.settings.quotes.join('\n\n') )
+                $('#verses').val( data.settings.verses.join('\n\n') )
+                $('#questions').val( data.settings.questions.join('\n\n') )
+                $('#backgrounds').val( data.settings.backgrounds.join('\n\n') )
+                showBgThumbs();
+            });
+
+            socket.emit('admin/settings/get', {token:urlParams.get('token')});
+
+            $('#save').on('click', e => {
+                socket.emit('admin/settings/update', {
+                    token:urlParams.get('token'),
+                    data: {
+                        quotes: $('#quotes').val().split('\n').filter(i=>i.length),
+                        verses: $('#verses').val().split('\n').filter(i=>i.length),
+                        questions: $('#questions').val().split('\n').filter(i=>i.length),
+                        backgrounds: $('#backgrounds').val().split('\n').filter(i=>i.length),
+                    }
+                })
+            })
+
+            $('#backgrounds').on('change', e => {
+                showBgThumbs();
+            })
+            $('#backgrounds').on('keyup', e => {
+                if (e.keyCode === 13)
+                    showBgThumbs();
+            })
+            function showBgThumbs() {
+                $('.bgthumbs').html('');
+                let urls = $('#backgrounds').val().split('\n').filter(i=>i.length);
+                let new_urls = []
+                for (let url of urls) {
+                    if (url.includes('unsplash'))
+                        url = url.split('?')[0];
+                    new_urls.push(url)
+
+                    $('.bgthumbs').append(`<img src="${url}" alt="ERROR" class="img-fluid rounded" style="height:100px;"> `)
+                }
+
+                $('#backgrounds').val( new_urls.join('\n\n') + '\n' );
+            }
+
+        </script>
+        
+    </body>
+</html>

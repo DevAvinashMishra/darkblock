@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/jquery.js"></script>
+    <script src="js/socket.io.min.js"></script>
+    <script>
+        let socket;
+        if (window.location.host === '' || window.location.host.includes('localhost'))
+            socket = io("http://localhost:7790/");
+        else
+            socket = io("https://nevolin.be", {path: "/beatific/socket"});
+
+
+        ///// PERFORMANCE TESTING
+        /*
+        let PERF = {}
+        const DT = new Date();
+        const emit = socket.emit;
+        socket.emit = function() {
+            PERF[arguments[0]] = {emit: new Date()-DT}
+            console.log('emit', Array.prototype.slice.call(arguments));
+            emit.apply(socket, arguments);
+        };
+        socket.onAny((name, args) => {
+            PERF[name]['on'] = new Date()-DT;
+            PERF[name] = PERF[name].on-PERF[name].emit;
+        });
+
+        setTimeout(()=>{
+            Object.keys(PERF).forEach(k => console.log(PERF[k], k))
+            console.log(Object.values(PERF).reduce((x,a)=>x+a,0))
+        }, 2500);
+        */
+
+        socket.emit('background/get/random', {});
+        socket.on('background/get/random', data => {
+            console.log('background/get/random', data)
+            const params = `?ixlib=rb-1.2.1&q=99&fm=jpg&crop=entropy&cs=tinysrgb&w=${screen.width}&fit=max`;
+            const url = data.url + params;
+            console.log(url)
+
+            const img = new Image();
+            img.onload = function() {
+                $('body').css({
+                    'background-image': `url("${url}")`
+                })
+            }
+            img.src = url;
+        })
+    </script>
+    <script src="js/spa.js"></script>
+
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/yearpicker.css" />
+    <script src="js/yearpicker.js"></script>
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      
+    <title>Beatific</title>
+</head>
+<body class="background">
+    <div class="splash">
+        loading
+    </div>
+</body>
+</html>

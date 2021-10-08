@@ -1,0 +1,912 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body, html {
+    scrollbar-width: thin;
+}
+body {
+    height: 100%;
+    display: block;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    opacity: 1;
+    background-attachment: fixed;
+    font-family: 'Canela';
+    font-weight: normal;
+    font-style: normal;
+
+    box-shadow: inset 0 100px 100px -100px rgba(0,0,0,0.6);
+}
+
+@font-face {
+    font-family: 'Canela';
+    src:url('../fonts/Canela-Regular.otf');
+    src:url('../fonts/Canela-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Canela-Regular.woff2') format('woff2'),
+        url('../fonts/Canela-Regular.woff') format('woff'),
+        url('../fonts/Canela-Regular.svg#Canela-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.shadow {
+    text-shadow: 1px 1px rgba(0,0,0,0.2);
+}
+.middle-input {
+    background: url('../images/shadow1.png') no-repeat center;
+    height: 320px;
+    justify-content: center;
+    width: 800px;
+}
+footer {
+    padding-bottom: 10px;
+}
+.splash {
+    margin: 0 auto;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    box-shadow: inset 0 -90px 90px -90px rgba(0,0,0,0.9);
+}
+
+main {
+    flex-grow: 1; /* fill height */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+header, footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 25%;
+}
+
+.middle {
+    flex-grow: 1; /* fill width */
+    text-align: center;
+}
+
+.right {
+    width: 25%;
+    text-align: right;
+}
+
+
+
+.settings {
+    display: flex;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+.settings-wrap {
+    display: flex;
+}
+.settings-inner {
+    color: black;
+    min-width: 360px;
+}
+.settings-head {
+    border-radius: 15px 15px 0px 0px;
+    background-color: rgb(255,239,239);
+}
+.settings-head strong {
+    font-weight: bold;
+}
+.settings-head, .settings-body {
+    padding: 20px 30px;
+}
+.settings-body {
+    border-radius: 0px 0px 15px 15px;
+    background-color: rgb(255,255,255);
+    padding-top: 20px;
+}
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2.5px solid rgb(255,239,239);
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+}
+
+input.switch {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+label.switch {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 60px;
+    height: 26px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+label.switch:after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+input.switch:checked + label.switch {
+    background: #bada55;
+}
+
+input.switch:checked + label.switch:after {
+    left: calc(100% - 3px);
+    transform: translateX(-100%);
+}
+
+
+
+
+.todo {
+    font-family: 'Varela Round', sans-serif;
+    top: 5px;
+    min-width: 450px;
+    position: fixed;
+    right: 10px;
+    height: 100%;
+    font-family: 'Varela Round', sans-serif;
+    max-width: 615px;
+    border-radius: 10px;
+    max-height: calc(100vh - 50px);
+    overflow: auto;
+}
+/* .todo-wrap {
+    display: flex;
+    position: absolute;
+    right: 10px;
+    bottom: 50px;
+    top: 5px;
+    min-width: 450px;
+} */
+.todo-main {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    color:black;
+    /* border-radius: 15px 0 0 15px; */
+
+    /* overflow: auto; */
+    /* scrollbar-width: thin; */
+}
+.todo-scroll-content{
+    overflow: auto;
+    scrollbar-width: thin; 
+    display: flex;
+}
+.todo-head {
+    display: flex;
+    width: 100%;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-bottom: 2.5px solid rgb(255,239,239);
+    padding-bottom: 10px;
+}
+.todo-body {
+    padding-top: 10px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.todo-body > div {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.todo-body h2 {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.todo-days {
+    color:black;
+    padding: 50px 0px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(255,239,239);
+    
+    width: 50px;
+    align-items: center;
+    /* overflow: auto;
+    scrollbar-width: thin; */
+}
+.todo-days span {
+    border: 1px solid rgb(255,209,209);
+    background: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px;
+    font-size: 0.6em;
+    cursor: pointer;
+    width: 18px;
+    height: 25px;
+    line-height: 20px;
+    margin-bottom: 3px;
+}
+.selected-day {
+    background-color: black !important;
+    color: white;
+    border: 1px solid black !important;
+}
+
+.todo-months-wrap {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255,239,239);
+    border-radius: 0 15px 15px 0;
+
+    /* overflow: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin; */
+}
+.todo-months-cal {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+.todo-months-cal img {
+    width: 15px;
+}
+.todo-months {
+    /*padding: 10px;*/
+        display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #fff;
+    margin-right: 10px;
+    border-radius: 50px;
+    width: 35px;
+    flex-wrap: wrap;
+}
+.todo-months span {
+    color: rgb(255,200,200);
+    padding: 30px 0px;
+    font-size: 0.6em;
+    border: 1px solid #fff;
+    background: white;
+    text-align: center;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 35px;
+}
+span.selected-month {
+    background-color: black !important;
+    color: white;
+    border: 1px solid black !important;
+}
+
+/*.todo-days span:not(.selected-day),
+.todo-months span:not(.selected-month) {
+    opacity: 0;
+}*/
+
+
+.todo-input {
+    display: flex;
+}
+.todo-input textarea:focus,
+.todo-input input:focus {
+  outline: 0;
+}
+
+.todo-input input,
+.todo-input textarea {
+  height: 25px;
+  font-size: 13px;
+  font-weight: 300;
+  width: 100%;
+  color:#ababab;
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  border-bottom: 1px solid rgb(235 235 235);
+  max-width: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+
+
+.todo-input svg {
+    stroke:rgb(230,230,230);
+    stroke-width:1;
+    fill: white; 
+    width: 20px;
+    height: 20px;
+}
+
+.todo-input-text {
+    width: 100%;
+}
+.bullet {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+.bullet img {
+    width: 12px;
+    height: 12px;
+}
+.completed-todo input {
+    text-decoration: line-through;
+    color: #ababab;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.todo-water {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+.todo-water div {
+    margin-left: 15px;
+}
+.todo-water h2+div {
+    min-height: 28px;
+}
+.todo-water-cups {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.todo-water h2,
+.todo-water-cups span {
+    align-self: center;
+    background: white;
+}
+.todo-water-cups span {
+    height: 28px;
+    width: 28px;
+    border: 1px solid lightblue;
+    border-radius: 180px;
+    padding: 5px;
+    text-align: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.todo-water-cups span:first-child {
+    border: 0 !important;
+    background: lightblue;
+}
+.todo-water-cups span img {
+    width: 10px;
+    height: 10px;
+    margin:0 auto;
+}
+.todo-water-stripe {
+    width: auto;
+    height: 10px;
+    border-bottom: 1px solid lightblue;
+    margin-top: -24px;
+}
+.full-cup {
+    background: lightblue!important;
+}
+.full-cup:before {
+    background-image: url('../images/cup-check.svg');
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    height: 10px;
+    width: 10px;
+    display: block;
+    content: ' ';
+    margin-top: -12px;
+    padding-top: 2px;
+    margin-left: 2px;
+}
+.ignore-cup {
+    margin:0 !important;
+}
+
+.todo-meals {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: auto !important;
+    padding: 10px 0;
+}
+.todo-meals div div {
+    display: flex;
+    flex-direction: column;
+}
+.todo-meals > div {
+    padding: 0px 15px;
+}
+
+.todo-mood div {
+    display: flex;
+    flex-direction: row;
+}
+.todo-mood div div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-align: center;
+    font-size: 0.7em;
+    cursor: pointer;
+}
+.todo-mood img,
+.todo-mood svg {
+    margin-bottom: 5px;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+}
+.current-mood {
+    background-image: url('../images/mood-check.svg');
+    background-size: 13px 13px;
+    background-repeat: no-repeat;
+    height: 45px;
+    width: 13px;
+    display: block;
+    content: ' ';
+    margin-top: -45px;
+    margin-left: 6px;
+}
+
+
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+.middle-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 60px;
+}
+.middle-input input {
+  height: 30px;
+  font-size: 16px;
+  font-weight: 300;
+  width: 100%;
+  max-width: 700px;
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+
+  color: white;
+  font-size: 50px;
+ 
+  border-top:0;
+  border-left:0;
+  border-right:0;
+  border-bottom: 1px solid rgb(230,230,230);
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+}
+.middle-input input:focus {
+  outline: 0;
+}
+
+header {
+    min-height: 100px;
+}
+
+.footer-quote {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.footer-quote > span {
+    margin-right: 10px;
+}
+.footer-quote .next-quote {
+    border-radius: 30px;
+    background-color: rgb(255,204,204);
+    min-width: 45px;
+    max-width: 45px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer {
+    margin-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-height: 100px;
+}
+footer .left,
+footer .right {
+    display: flex;
+    align-items: flex-end;
+}
+footer .middle {
+    display: flex;
+    align-items: end; 
+    justify-content: center;
+}
+footer .right {
+    justify-content: flex-end;
+}
+.open-settings {
+    z-index: 99;
+}
+.close-settings {
+    margin-left: 5px;
+}
+.open-settings img,
+.close-settings img,
+.open-todo img {
+    cursor:pointer;
+    opacity: 0.5;
+}
+.open-settings img:hover,
+.close-settings img:hover,
+.open-todo img:hover {
+    opacity: 1;
+}
+
+header .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.top-time {
+    margin-right: 20px;
+    font-size: 60px;
+}
+.top-weather {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 30px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+    height: 60px;
+}
+.top-weather span:last-child {
+    font-size: 15px;
+}
+
+.fadeIn {
+    opacity: 1.0;
+    transition: opacity 700ms;
+}
+.fadeOut {
+    opacity: 0.0;
+    transition: opacity 700ms;
+}
+
+
+.todo-months-cal img {
+    cursor: pointer;
+}
+.yearpicker-container {
+    position: absolute;
+    right: 30px;
+}
+.yearpicker-items.selected {
+    color: rgb(255,200,200) !important;
+}
+.yearpicker-items:hover {
+    color: rgb(255,180,180) !important;
+}
+
+.top-time-wrap {
+    display: flex;
+}
+.top-time-24 {
+    opacity: 0;
+    transition: opacity 700ms;
+
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 30px;
+    background-color: rgb(255,239,239);
+    height: 50px;
+    width: 250px;
+
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.top-time-24 span {
+    width: 100%;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: black;
+}
+.top-time-24 img {
+    height: 35px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.top-time-24 label {
+    width: 130px;
+}
+.top-time-dots {
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 30px;
+    background-color: rgb(255,204,204);
+    display: flex;
+    height: 30px;
+    width: 35px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+.top-time-dots span {
+    font-size: 30px;
+    line-height: 0;
+    height: 23px;
+}
+
+.ui-icon-grip-dotted-vertical {
+    align-self: center;
+    opacity: 0;
+    transition: opacity 700ms;
+    cursor: pointer;
+}
+.todo-input:hover .ui-icon-grip-dotted-vertical {
+    opacity: 1;
+    transition: opacity 700ms;
+}
+.ui-icon-trash {
+    align-self: center;
+    opacity: 0;
+    transition: opacity 700ms;
+    cursor: pointer;
+}
+.todo-input:hover .ui-icon-trash {
+    opacity: 1;
+    transition: opacity 700ms;
+}
+
+.todo-head-date {
+    border: 1px solid rgb(255,239,239);
+    border-radius: 15px;
+    padding: 9px 25px 7px 30px;
+    background: #000;
+    color: #fff;
+    position: relative;
+    font-size: 10px;
+    min-width: 125px;
+}
+.todo-head-date img {
+    position: absolute;
+    left: 9px;
+}
+.excited, .main_todo,.happiest {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px 15px 20px 15px;
+    box-sizing: border-box;
+}
+ .main_todo{
+     margin-bottom: -6px !important;
+    background: #fafafa;
+    padding-bottom: 0;
+ }
+.daily_todo {
+    border: 1px solid #eee;
+    padding: 20px 15px 25px 15px;
+    box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 0;
+}
+.night-gratfull {
+    width: calc(50% + 5px) !important;
+    padding-left: 15px;
+    box-sizing: border-box;
+    padding-bottom: 10px;
+    border: 1px solid #eee;
+    padding: 15px 15px 5px 20px;
+    border-top-right-radius: 10px;
+    background: #fafafa;
+    border-bottom-right-radius: 10px;
+    min-height: 72px;
+    border-left: 0;
+    margin-left: -6px;
+    position: relative;
+    z-index: 0;
+}
+.happiest,.excited {
+    width: 50% !important;
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+.todo-date-wrap {
+    background: rgb(255,239,239);
+    display: flex;
+    padding-bottom: 20px;
+}
+.todo-meals input {
+    height: 30px;
+}
+
+.login-wrapper {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    /* flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto; */
+}
+.register {
+    border-left: 1px solid #ccc;
+    position: relative;
+}
+/* .register:before {content: "";width: 10px;height: 10px;background: #000;top: -1px;position: absolute;left: 50%;z-index: 2;margin-left: -8px;border-radius: 10px;}
+
+.register:after {content: "";width: 100px;height: 2px;position: absolute;left: 50%;top: 3px;background: #b5b5b5;margin-left: -50px;} */
+.login-wrapper input {
+    border: 1px solid #ccc;
+    height: 35px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 3px;
+}
+.login, .register {
+    padding: 20px;
+    /* width: 50%; */
+}
+.register input:not([type="button"]) {
+    width: calc(50% - 7.5px);
+    float: left;
+}
+.register input[name="name"], .register #txtPassRegister {
+    margin-right: 7.5px;
+}
+.register input[name="email"], .register #txtPass2Register {
+    margin-left: 7.5px;
+}
+
+.login-wrapper input:focus-visible {
+    outline: none;
+}
+.login-wrapper input[type="button"] {
+    width: auto;
+    min-width: 100px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.login-wrapper h2 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.gratefull {
+    width: calc(50% + 5px) !important;
+    padding: 15px 15px 5px 20px;
+    min-height: 72px;
+    margin-left: -6px;
+    position: relative;
+    z-index: 0;
+}
+.todo-input-radio span {
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.todo-input-radio label {
+    flex: 1;
+        position: relative
+}
+
+.todo-input-radio {
+    display: flex;
+    border-bottom: 1px solid rgb(235 235 235);
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.todo-input-radio input {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    margin: 0;
+    cursor: pointer;
+}
+
+img.checked {
+    display: none;
+}
+
+.todo-input-radio img {
+    position: absolute;
+    z-index: 2;
+    top: 3px;
+    width: 13px;
+}
+
+.todo-input-radio span {
+    padding-left: 20px;
+}
+.todo-input-radio input:checked + .mark img.radio-bullet {
+    display: none;
+}
+.todo-input-radio input:checked + .mark img.checked {
+    display: block;
+}

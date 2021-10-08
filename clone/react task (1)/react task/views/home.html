@@ -1,0 +1,994 @@
+<div class="container">
+    <header>
+        <div class="left"></div>
+        <div class="middle"></div>
+        <div class="right" style="width: 100%;">
+            <div class="top-time-wrap">
+                <div class="top-time-24">
+                    <input type="checkbox" class="switch" id="sTwentyfourTop" />
+                    <label class="switch" for="sTwentyfourTop"></label>
+                    <span>24 hrs clock</span>
+                    <img src="images/close-todo.svg" style="height: 30px;">
+                </div>
+                <div class="top-time-dots fadeOut"><span>...</span></div>
+                <div class="top-time shadow"></div>
+            </div>
+            <div class="top-weather shadow"><span></span><span></span></div>
+        </div>
+    </header>
+    <main>
+        <div class="left"></div>
+        <div class="middle">
+            <div class="middle-input">
+                <h1 class="shadow"></h1>
+                <input id="excited-main" type="text" autocomplete="off" />
+            </div>
+
+        </div>
+        <div class="right"></div>
+    </main>
+    <footer>
+        <div class="left">
+            <div class="open-settings">
+                <img src="images/settings.svg" height="20px">
+            </div>
+            <div class="settings fadeOut">
+                <div class="settings-wrap">
+                    <div class="settings-inner">
+                        <div class="settings-head"><strong>Settings</strong></div>
+                        <div class="settings-body">
+                            <div class="settings-row">
+                                <span>Bible Verses</span>
+                                <input type="checkbox" class="switch" id="sBibleVerses" />
+                                <label class="switch" for="sBibleVerses">X</label>
+                            </div>
+                            <div class="settings-row">
+                                <span>Quotes</span>
+                                <input type="checkbox" class="switch" id="sQuotes" />
+                                <label class="switch" for="sQuotes">X</label>
+                            </div>
+                            <div class="settings-row">
+                                <span>Time</span>
+                                <input type="checkbox" class="switch" id="sTime" />
+                                <label class="switch" for="sTime">X</label>
+                            </div>
+                            <div class="settings-row">
+                                <span>Weather</span>
+                                <input type="checkbox" class="switch" id="sWeather" />
+                                <label class="switch" for="sWeather">X</label>
+                            </div>
+                            <div class="settings-row">
+                                <span>24 hour format</span>
+                                <input type="checkbox" class="switch" id="sTwentyfour" checked=checked />
+                                <label class="switch" for="sTwentyfour">X</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="settings-wrap">
+                    <div class="close-settings">
+                        <img src="images/close-settings.svg" height="30px">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="middle">
+            <div class="footer-quote shadow">
+                <span></span>
+                <div class="next-quote fadeOut">
+                    <img src="images/next-quote.svg" style="height: 10px;">
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="open-todo">
+                <img src="images/todo.svg" height="25px">
+                <img src="images/close-todo.svg" height="30px" style="display:none">
+            </div>
+            <div class="todo fadeOut">
+                <div class="todo-wrap">
+                    <div class="todo-scroll-content">
+                        <div class="todo-main">
+                            <div class="todo-head">
+                                <!-- <div style="width: 50px;">&nbsp;</div> -->
+                                <div class="todo-head-date">
+                                    <img class="radio-bullet" src="images/Group 288.svg">
+                                    <span></span>
+                                </div>
+                                <div style="width: 100%;">
+                                    <span class="todo-head-weather">
+
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="todo-body">
+
+                                <div class="excited">
+                                    <h2>TODAY I’M EXCITED ABOUT</h2>
+                                    <div class="todo-input">
+                                        <input id="excited-todo" type="text" autocomplete="off" />
+                                    </div>
+                                </div>
+
+                                <div class="gratefull">
+                                    <h2 class="todo-question"></h2>
+                                    <div class="todo-input">
+                                        <input id="gratfull-todo" type="text" autocomplete="off" />
+                                    </div>
+                                </div>
+
+                                <div class="main_todo">
+                                    <h2>Main Three Todo</h2>
+                                    <div class="main-todos-wrap">
+
+                                    </div>
+
+                                </div>
+                                <div class="daily_todo">
+                                    <h2>Daily Todo</h2>
+                                    <div class="secondary-todos-wrap">
+
+                                    </div>
+                                </div>
+
+                                <div class="todo-meals">
+                                    <div>
+                                        <h2>Breakfast</h2>
+                                        <div class="todo-input">
+                                            <input id="todo-breakfast-1" type="text" autocomplete="off" />
+                                            <input id="todo-breakfast-2" type="text" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2>Lunch</h2>
+                                        <div class="todo-input">
+                                            <input id="todo-lunch-1" type="text" autocomplete="off" />
+                                            <input id="todo-lunch-2" type="text" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h2>Dinner</h2>
+                                        <div class="todo-input">
+                                            <input id="todo-dinner-1" type="text" autocomplete="off" />
+                                            <input id="todo-dinner-2" type="text" autocomplete="off" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="todo-water">
+                                    <h2>Water</h2>
+                                    <div>
+                                        <div class="todo-water-cups">
+                                            <span class="ignore-cup"><img src="images/water.svg" /></span>
+                                            <span class="full-cup">1</span>
+                                            <span>2</span>
+                                            <span>3</span>
+                                            <span>4</span>
+                                            <span>5</span>
+                                            <span>6</span>
+                                            <span>7</span>
+                                            <span>8</span>
+                                        </div>
+                                        <div class="todo-water-stripe"></div>
+                                    </div>
+                                </div>
+
+                                <div class="workout_todo">
+                                    <div class="workout_todo-wrap ui-sortable">
+                                        <div class="todo-radio">
+                                            <div class="todo-input-radio">
+                                                <label for="exercise">
+                                                    <input type="radio" id="exercise" name="workout" value="exercise"
+                                                        checked>
+                                                    <div class="mark">
+                                                        <img class="radio-bullet" src="images/Ellipse 288.svg">
+                                                        <img class="checked" src="images/completed.svg">
+                                                    </div>
+                                                    <span>EXERCISE</span>
+                                                </label>
+                                                <label for="meditation">
+                                                    <input type="radio" id="meditation" name="workout"
+                                                        value="meditation">
+                                                    <div class="mark">
+                                                        <img class="radio-bullet" src="images/Ellipse 288.svg">
+                                                        <img class="checked" src="images/completed.svg">
+                                                    </div>
+                                                    <span>MEDITATION</span>
+                                                </label>
+                                                <label for="relaxation">
+                                                    <input type="radio" id="relaxation" name="workout"
+                                                        value="relaxation">
+                                                    <div class="mark">
+                                                        <img class="radio-bullet" src="images/Ellipse 288.svg">
+                                                        <img class="checked" src="images/completed.svg">
+                                                    </div>
+                                                    <span>RELAXATION</span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="todo-mood">
+                                    <h2>Happy Scale</h2>
+                                    <div>
+                                        <div>
+                                            <img src="images/mood-sad.svg" /><span class="mood-id current-mood"></span>
+                                            <span>1</span>
+                                        </div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ffe9f6" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>2</span></div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ffddf1" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>3</span></div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ffd2ec" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>4</span></div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ffc7e7" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>5</span></div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ffbce3" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>6</span></div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ffb1de" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>7</span></div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ffa6d9" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>8</span></div>
+                                        <div><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                                viewBox="0 0 30 30">
+                                                <defs></defs>
+                                                <circle class="a" fill="#ff90d0" cx="15" cy="15" r="15" />
+                                            </svg><span class="mood-id"></span>
+                                            <span>9</span></div>
+                                        <div><img src="images/mood-happy.svg" /><span class="mood-id"></span>
+                                            <span>10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="happiest">
+                                    <h2>Today Happiest Moment</h2>
+                                    <div class="todo-input">
+                                        <input id="todo-happiest-moment" type="text" autocomplete="off" />
+                                    </div>
+                                </div>
+                                <div class="night-gratfull">
+                                    <h2>Tonight Im grateful for</h2>
+                                    <div class="todo-input">
+                                        <input id="todo-grateful" type="text" autocomplete="off" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <h2>My Rewards</h2>
+                                    <div class="todo-input">
+                                        <input id="todo-rewards" type="text" autocomplete="off" />
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="todo-date-wrap">
+                            <div class="todo-days">
+                                <span data-value="1">1</span>
+                                <span data-value="2">2</span>
+                                <span data-value="3">3</span>
+                                <span data-value="4">4</span>
+                                <span data-value="5">5</span>
+                                <span data-value="6">6</span>
+                                <span data-value="7">7</span>
+                                <span data-value="8">8</span>
+                                <span data-value="9">9</span>
+                                <span data-value="10">10</span>
+                                <span data-value="11">11</span>
+                                <span data-value="12">12</span>
+                                <span data-value="13">13</span>
+                                <span data-value="14">14</span>
+                                <span data-value="15">15</span>
+                                <span data-value="16">16</span>
+                                <span data-value="17">17</span>
+                                <span data-value="18">18</span>
+                                <span data-value="19">19</span>
+                                <span data-value="20">20</span>
+                                <span data-value="21">21</span>
+                                <span data-value="22">22</span>
+                                <span data-value="23">23</span>
+                                <span data-value="24">24</span>
+                                <span data-value="25">25</span>
+                                <span data-value="26">26</span>
+                                <span data-value="27">27</span>
+                                <span data-value="28">28</span>
+                                <span data-value="29">29</span>
+                                <span data-value="30">30</span>
+                                <span data-value="31">31</span>
+                            </div>
+                            <div class="todo-months-wrap">
+                                <div class="todo-months-cal">
+                                    <img src="images/calendar.svg">
+                                </div>
+                                <div class="todo-months">
+                                    <span data-value="1">jan</span>
+                                    <span data-value="2">feb</span>
+                                    <span data-value="3">maa</span>
+                                    <span data-value="4">apr</span>
+                                    <span data-value="5">may</span>
+                                    <span data-value="6">jun</span>
+                                    <span data-value="7">jul</span>
+                                    <span data-value="8">aug</span>
+                                    <span data-value="9">sep</span>
+                                    <span data-value="10">oct</span>
+                                    <span data-value="11">nov</span>
+                                    <span data-value="12">dec</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script>
+    const MONTHS_SHORT = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    let currentdate = new Date();
+    let day, month, year, hours, minutes;
+    day = currentdate.getDate();
+    month = (currentdate.getMonth() + 1);
+    year = currentdate.getFullYear();
+
+    // update top time
+    function updateTime() {
+        currentdate = new Date();
+        hours = currentdate.getHours()
+        minutes = currentdate.getMinutes();
+        let suffix = '';
+        if ($('#sTwentyfour').prop('checked')) {
+            suffix = hours >= 12 ? 'pm' : 'am';
+            hours = formatAMPM(hours)
+        }
+
+        $('.top-time').text(`${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${suffix}`);
+    }
+    updateTime();
+    $('.top-time').hide(); // default
+    $('.top-weather, .todo-head-weather').hide(); // default
+
+    // update time every 500ms
+    setInterval(() => {
+        updateTime();
+    }, 500);
+
+    function formatAMPM(hours) {
+        let ampm = hours >= 12 ? 'pm' : 'am';
+        hours = hours % 12;
+        hours = hours ? hours : 12; // the hour '0' should be '12'
+        return hours;
+    }
+
+    function getDateString() {
+        return `${day}/${month}/${year}`;
+    }
+    function getDateStringToday() {
+        let dt = new Date();
+        return `${dt.getDate()}/${dt.getMonth() + 1}/${dt.getFullYear()}`;
+    }
+    function getDateStringPretty() {
+        return `${MONTHS_SHORT[month - 1]} ${day}, ${year}`;
+    }
+    function setDateText() {
+        $('.todo-head-date span').text(getDateString() == getDateStringToday() ? 'TODAY' : getDateStringPretty())
+    }
+
+    //////////////////////////////
+    // SETTINGS FORM
+    //////////////////////////////
+
+    // on sending settings data
+    socket.on('settings/update', (data) => {
+        console.log('todo/update:', data)
+    });
+
+    // on receiving settings data
+    socket.on('settings/get', (data) => {
+        console.log('settings/get:', data)
+        if (data && data.form)
+            fillSettingsForm(data.form)
+    });
+
+    // obtain settings data
+    socket.emit('settings/get', {
+        token: getToken()
+    });
+
+    function toggleTime() {
+        if (!$('#sTime').prop('checked'))
+            $('.top-time').hide();
+        else
+            $('.top-time').show();
+
+        if ($('#sWeather').prop('checked') && $('#sTime').prop('checked'))
+            $('.top-weather').css({ 'border-left': '1px solid rgba(255,255,255,0.3)' });
+        else
+            $('.top-weather').css({ 'border-left': 'none' });
+    }
+    function toggleWeather() {
+        if (!$('#sWeather').prop('checked'))
+            $('.top-weather, .todo-head-weather').hide();
+        else
+            $('.top-weather, .todo-head-weather').show();
+
+        if ($('#sWeather').prop('checked') && $('#sTime').prop('checked'))
+            $('.top-weather').css({ 'border-left': '1px solid rgba(255,255,255,0.3)' });
+        else
+            $('.top-weather').css({ 'border-left': 'none' });
+    }
+    function toggleFooterQuote() {
+        const verses = $('#sBibleVerses').prop('checked');
+        const quotes = $('#sQuotes').prop('checked');
+        if (verses || quotes) {
+            socket.emit('quotes/get/random', { verses, quotes })
+        } else if (!verses && !quotes)
+            $('.footer-quote span').text('');
+    }
+
+    // on receiving new quote
+    socket.on('quotes/get/random', data => {
+        $('.footer-quote span').text(`${data.text}`);
+    });
+
+    // fill settings with new data
+    function fillSettingsForm(data) {
+        $('#sBibleVerses').prop('checked', data.bible_verses)
+        $('#sQuotes').prop('checked', data.quotes)
+        $('#sTime').prop('checked', data.time)
+        $('#sWeather').prop('checked', data.weather)
+        $('#sTwentyfour, #sTwentyfourTop').prop('checked', data.twentyfour)
+        toggleTime();
+        toggleWeather();
+        toggleFooterQuote();
+    }
+
+    // change events
+    $('#sTime').on('change', e => {
+        toggleTime();
+    });
+    $('#sWeather').on('change', e => {
+        toggleWeather();
+    });
+    $('#sBibleVerses, #sQuotes').on('change', e => {
+        toggleFooterQuote();
+    });
+
+    // get settings data as object
+    function getSettingsData() {
+        return {
+            bible_verses: $('#sBibleVerses').prop('checked'),
+            quotes: $('#sQuotes').prop('checked'),
+            time: $('#sTime').prop('checked'),
+            weather: $('#sWeather').prop('checked'),
+            twentyfour: $('#sTwentyfour').prop('checked'),
+        }
+    }
+
+    // save settings data on server
+    let settings_changed = false;
+    setInterval(() => {
+        if (!settings_changed) return;
+        settings_changed = false;
+        const data = {
+            token: getToken(),
+            form: getSettingsData()
+        };
+        socket.emit('settings/update', data);
+        // save form if there's been any change
+    }, 100);
+
+    // persist data on changing any input field
+    $(document).on('change', '.settings input', e => {
+        settings_changed = true;
+    });
+
+    //////////////////////////////
+    // TODO FORM
+    //////////////////////////////
+
+    // on saving todo data
+    socket.on('todo/update', (data) => {
+        console.log('todo/update:', data)
+    });
+
+    // on received todo data
+    socket.on('todo/get', (data) => {
+        console.log('todo/get:', data)
+        clearTodoForm(data.question)
+
+        setDateText()
+        if (data && data.form) {
+            fillTodoForm(data.form, data.form.question)
+        }
+    });
+
+    // get todo data from server
+    socket.emit('todo/get', {
+        token: getToken(),
+        date: getDateString(),
+    });
+
+    // clear todo form
+    function clearTodoForm(question) {
+        fillTodoForm({
+            "question_answer": "",
+            "main_todos": [{ value: '', completed: false }],
+            "secondary_todos": [{ value: '', completed: false }],
+            "water": 0,
+            "breakfast": [
+                "",
+                ""
+            ],
+            "lunch": [
+                "",
+                ""
+            ],
+            "dinner": [
+                "",
+                ""
+            ],
+            "mood": 0,
+            "happiest_moment": "",
+            "rewards": "",
+            "grateful": ""
+        }, question)
+    }
+
+    // fill todo form with data
+    function fillTodoForm(data, question) {
+        $('.middle-input h1, .todo-question').text(question)
+        $('#excited-todo, #excited-main').val(data.question_answer);
+
+        // $('.completed-todo').removeClass('completed-todo');
+        // $('.bullet').html('<img src="images/bullet.svg">')
+
+        // set primary todos
+        $('.main-todos-wrap').empty()
+        for (let i = 0; i < data.main_todos.length; i++) {
+            const el = createMainTodo(i + 1, data.main_todos[i].value, data.main_todos[i].completed)
+        }
+
+        // set secondary todos
+        $('.secondary-todos-wrap').empty()
+        for (let i = 0; i < data.secondary_todos.length; i++) {
+            const el = createSecondaryTodo(i + 1, data.secondary_todos[i].value, data.secondary_todos[i].completed)
+        }
+
+        // set water
+        $('.todo-water-cups span').removeClass('full-cup')
+        for (const el of $('.todo-water-cups span:not(.ignore-cup)').toArray()) {
+            if (parseInt($(el).text()) <= data.water)
+                $(el).addClass('full-cup');
+        };
+
+        // set food
+        $('#todo-breakfast-1').val(data.breakfast[0])
+        $('#todo-breakfast-2').val(data.breakfast[1])
+        $('#todo-lunch-1').val(data.lunch[0])
+        $('#todo-lunch-2').val(data.lunch[1])
+        $('#todo-dinner-1').val(data.dinner[0])
+        $('#todo-dinner-2').val(data.dinner[1])
+
+        // set mood
+        $('.mood-id').removeClass('current-mood');
+        $('.todo-mood div div').css({ filter: 'grayscale(1.0)' });
+        for (const ell of $('.todo-mood div div').toArray()) {
+            let j = parseInt($(ell).first('span').text());
+            if (j < data.mood)
+                $(ell).css({ filter: 'grayscale(0.0)' });
+            else if (j === data.mood) {
+                $(ell).find('.mood-id').addClass('current-mood');
+                $(ell).css({ filter: 'grayscale(0.0)' });
+            }
+            else if (j > data.mood)
+                $(ell).css({ filter: 'grayscale(1.0)' });
+        };
+
+        $('#todo-happiest-moment').val(data.happiest_moment)
+        $('#todo-rewards').val(data.rewards)
+        $('#todo-grateful').val(data.grateful)
+    }
+
+    // get all todo data as object
+    function getTodoData() {
+        return {
+            question: $('.todo-question').text(),
+            question_answer: $('#excited-todo').val(),
+            main_todos: $('[id^=main-todo-]').map((idx, el) => {
+                return {
+                    value: $(el).val(),
+                    completed: $(el).parent().parent().hasClass('completed-todo')
+                }
+            }).toArray(),
+            secondary_todos: $('[id^=secondary-todo-]').map((idx, el) => {
+                return {
+                    value: $(el).val(),
+                    completed: $(el).parent().parent().hasClass('completed-todo')
+                }
+            }).toArray(),
+            water: parseInt($('.full-cup').last().text().trim()),
+            breakfast: [$('#todo-breakfast-1').val(), $('#todo-breakfast-2').val()],
+            lunch: [$('#todo-lunch-1').val(), $('#todo-lunch-2').val()],
+            dinner: [$('#todo-dinner-1').val(), $('#todo-dinner-2').val()],
+            mood: parseInt($('.current-mood').parent().find('span').text().trim()),
+            happiest_moment: $('#todo-happiest-moment').val(),
+            rewards: $('#todo-rewards').val(),
+            grateful: $('#todo-grateful').val(),
+        }
+    }
+
+    // persist / save data
+    let todo_changed = false;
+    setInterval(() => {
+        if (!todo_changed) return;
+        todo_changed = false;
+        const data = {
+            token: getToken(),
+            form: getTodoData(),
+            date: getDateString()
+        };
+        socket.emit('todo/update', data);
+        // save form if there's been any change
+    }, 1000);
+
+
+    // settings menu
+    $('.settings').hide();
+    $('.open-settings img, .close-settings img').click(e => {
+        $('.settings').show();
+        if ($('.settings').hasClass('fadeOut')) {
+            $('.settings').removeClass('fadeOut').addClass('fadeIn')
+            $('.open-settings').toggle()
+        } else {
+            $('.open-settings').toggle()
+            $('.settings').removeClass('fadeIn').addClass('fadeOut')
+            setTimeout(() => $('.settings').hide(), 700)
+        }
+    });
+
+    // todo menu
+    $('.todo').hide();
+    $('.open-todo img').click(e => {
+        if ($('.todo').hasClass('fadeOut')) {
+            $('.todo').show();
+            $('.todo').removeClass('fadeOut').addClass('fadeIn')
+            $('.open-todo img').first().hide();
+            $('.open-todo img').last().show();
+        } else {
+            $('.todo').removeClass('fadeIn').addClass('fadeOut')
+            setTimeout(() => $('.todo').hide(), 700)
+            $('.open-todo img').first().show();
+            $('.open-todo img').last().hide();
+        }
+    });
+
+    // persist data on changing any input field
+    $(document).on('input', '.todo-body input, #excited-main', e => {
+        todo_changed = true;
+    });
+
+    // main excited todo sync
+    $('#excited-main').on('input', function (e) {
+        let input = $(this);
+        let val = input.val();
+        $('#excited-todo').val(val);
+    });
+    // todo excited todo sync
+    $('#excited-todo').on('input', function (e) {
+        let input = $(this);
+        let val = input.val();
+        $('#excited-main').val(val);
+    });
+
+    // todo water functionality
+    $('.todo-water-cups span:not(.ignore-cup)').on({
+        click: (e) => {
+            $('.todo-water-cups span').removeClass('full-cup')
+            let this_ = $(e)[0].currentTarget;
+            let el = $(e)[0].currentTarget;
+            for (const el of $('.todo-water-cups span:not(.ignore-cup)').toArray()) {
+                $(el).addClass('full-cup');
+                if (this_ === el) break;
+            };
+            todo_changed = true;
+        }
+    });
+
+    // todo mood functionality
+    $('.todo-mood div div').on({
+        click: (e) => {
+            $('.mood-id').removeClass('current-mood');
+            $('.todo-mood div div').css({ filter: 'grayscale(0.0)' });
+            let el = $(e)[0].currentTarget;
+            $(el).find('span.mood-id').addClass('current-mood');
+
+            $('.todo-mood div div').css({ filter: 'grayscale(1.0)' });
+            for (const ell of $('.todo-mood div div').toArray()) {
+                if (el !== ell)
+                    $(ell).css({ filter: 'grayscale(0.0)' });
+                else if (el === ell) {
+                    $(ell).css({ filter: 'grayscale(0.0)' });
+                    break;
+                }
+            };
+            todo_changed = true;
+        }
+    });
+
+    // todo complete toggle
+    $(document).on('click', '.bullet', (e) => {
+        let el = $(e.currentTarget);
+        el.parent().toggleClass('completed-todo');
+        if (el.parent().hasClass('completed-todo'))
+            el.html('<img src="images/completed.svg">')
+        else
+            el.html('<img src="images/bullet.svg">')
+        todo_changed = true;
+    });
+
+    // set default day/month (today)
+    $('.todo-days span[data-value="' + day + '"]').toggleClass('selected-day');
+    $('.todo-months span[data-value="' + month + '"]').toggleClass('selected-month');
+
+    // changing todo day (history nav)
+    $('.todo-days span').click(e => {
+        let el = $($(e)[0].currentTarget);
+        if (el.hasClass('selected-day')) return;
+        day = parseInt(el.data('value'));
+        month = parseInt($('.selected-month').data('value'))
+        $('.selected-day, .todo-days span[data-value="' + day + '"]').toggleClass('selected-day');
+        socket.emit('todo/get', {
+            token: getToken(),
+            date: getDateString(),
+        });
+    })
+
+    // changing todo month (history nav)
+    $('.todo-months span').click(e => {
+        let el = $($(e)[0].currentTarget);
+        if (el.hasClass('selected-month')) return;
+        day = parseInt($('.selected-day').data('value'));
+        month = parseInt(el.data('value'))
+        $('.selected-month, .todo-months span[data-value="' + month + '"]').toggleClass('selected-month');
+        socket.emit('todo/get', {
+            token: getToken(),
+            date: getDateString(),
+        });
+    })
+
+    // obtain geo position
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        }
+    }
+    getLocation();
+
+    // get weather data
+    function showPosition(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const key = "3bbf87eb2b78487da02173724211109";
+        $.get("https://api.weatherapi.com/v1/current.json?key=" + key + "&q=" + latitude + "," + longitude, function (data) {
+            console.log('weatherapi', data);
+            if (data.location.country === "United States of America") {
+                $(".top-weather span:first, .todo-head-weather").html(data.current.temp_f + "°F");
+            }
+            else {
+                $(".top-weather span:first, .todo-head-weather").html(data.current.temp_c + "°C");
+            }
+            $(".top-weather span:last").html(data.location.name)
+        });
+    }
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                console.log("User denied the request for Geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                console.log("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                console.log("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                console.log("An unknown error occurred.");
+                break;
+        }
+    }
+
+    // todo year picker
+    $('.todo-months-cal img').yearpicker({
+        year: year,
+        onChange: newYear => {
+            if (year === newYear) return;
+            if (newYear > 0)
+                year = newYear;
+            setDateText()
+            socket.emit('todo/get', {
+                token: getToken(),
+                date: getDateString(),
+            });
+        }
+    });
+
+    // todo days/months hover functionality
+    /*$('.todo-days, .todo-months-wrap').hover(e => {
+        $('.todo-days span, .todo-months span').css('opacity', 1)
+    }, e => {
+        $('.todo-days span, .todo-months span').css('opacity', 0)
+    })*/
+
+    // 24h time menu open button
+    $('.top-time-dots, .top-time-24').hide();
+    $('.top-time-dots').click(e => {
+        $('.top-time-dots').hide();
+        $('.top-time-24').show().css('opacity', 1)
+    });
+
+    // 24h time menu close button
+    $('.top-time-24 img').click(e => {
+        $('.top-time-24').css('opacity', 0)
+        setTimeout(() => $('.top-time-24').hide(), 700)
+    });
+
+    // time hover
+    $('.top-time-wrap').hover(e => {
+        if ($('.top-time-24').is(":hidden"))
+            $('.top-time-dots').show()
+        $('.top-time-dots').removeClass('fadeOut').addClass('fadeIn');
+    }, e => {
+        $('.top-time-dots').removeClass('fadeIn').addClass('fadeOut');
+    });
+
+    // 24-hour format toggle
+    $('#sTwentyfourTop, #sTwentyfour').on('change', e => {
+        $('#sTwentyfourTop, #sTwentyfour').prop('checked', $(e.target).prop('checked'))
+    });
+
+
+    // footer quote hover
+    $('.footer-quote').hover(e => {
+        const verses = $('#sBibleVerses').prop('checked');
+        const quotes = $('#sQuotes').prop('checked');
+        if (verses || quotes) {
+            $('.next-quote').removeClass('fadeOut').addClass('fadeIn');
+        }
+    }, e => {
+        $('.next-quote').removeClass('fadeIn').addClass('fadeOut');
+    });
+
+    // skip quote button
+    $('.next-quote').on('click', e => {
+        toggleFooterQuote();
+    });
+
+    // sortable/draggable todo items
+    function initSortable() {
+        $(".sortable1").parent().sortable({
+            placeholder: "ui-state-highlight",
+            helper: 'clone',
+            stop: () => {
+                todo_changed = true;
+            }
+        });
+        $(".sortable2").parent().sortable({
+            placeholder: "ui-state-highlight",
+            helper: 'clone',
+            stop: () => {
+                todo_changed = true;
+            }
+        });
+
+    }
+
+    // helper function to create todo item
+    function createMainTodo(nextNum, val, completed) {
+        const nums = $('[id^=main-todo-]').length;
+        const obj = $(`
+                <div class="todo-input sortable1">
+                    <span class="ui-icon ui-icon-grip-dotted-vertical" ></span>
+                    <div class="bullet"><img src="images/${completed ? 'completed' : 'bullet'}.svg"></div>
+                    <div class="todo-input-text">
+                        <input id="main-todo-${nextNum}" value="${val}" type="text" autocomplete="off" />
+                    </div>
+                    <span class="ui-icon ui-icon-trash" ></span>
+                </div>`);
+        if (completed) obj.addClass('completed-todo');
+        $('.main-todos-wrap').append(obj);
+        initSortable()
+        return obj;
+    }
+
+    // helper function to create todo item
+    function createSecondaryTodo(nextNum, val, completed) {
+        const nums = $('[id^=secondary-todo-]').length;
+        const obj = $(`
+                <div class="todo-input sortable2">
+                    <span class="ui-icon ui-icon-grip-dotted-vertical" ></span>
+                    <div class="bullet"><img src="images/${completed ? 'completed' : 'bullet'}.svg"></div>
+                    <div class="todo-input-text">
+                        <input id="secondary-todo-${nextNum}" value="${val}" type="text" autocomplete="off" />
+                    </div>
+                    <span class="ui-icon ui-icon-trash" ></span>
+                </div>`);
+        if (completed) obj.addClass('completed-todo');
+        $('.secondary-todos-wrap').append(obj);
+        initSortable()
+        return obj;
+    }
+
+    // on "enter" key make a new todo item
+    $(document).on('keyup', '[id^=main-todo-]', e => {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            const curNum = parseInt($(e.target).prop('id').replace('main-todo-', ''));
+            const nums = $('[id^=main-todo-]').length;
+            const nextNum = nums + 1;
+            if (curNum < nums) {
+                $(`#main-todo-${curNum + 1}`).focus()
+            } else {
+                createMainTodo(nextNum, '')
+                $(`#main-todo-${nextNum}`).focus()
+            }
+        }
+    });
+
+    // on "enter" key make a new todo item
+    $(document).on('keyup', '[id^=secondary-todo-]', e => {
+        if (e.key === 'Enter' || e.keyCode === 13) {
+            const curNum = parseInt($(e.target).prop('id').replace('secondary-todo-', ''));
+            const nums = $('[id^=secondary-todo-]').length;
+            const nextNum = nums + 1;
+            if (curNum < nums) {
+                $(`#secondary-todo-${curNum + 1}`).focus()
+            } else {
+                createSecondaryTodo(nextNum, '')
+                $(`#secondary-todo-${nextNum}`).focus()
+            }
+        }
+    });
+
+    // trash todo item
+    $(document).on('click', '.ui-icon-trash', e => {
+        const grandpa = $(e.currentTarget).parent().parent();
+        if (grandpa.children().length > 1)
+            $(e.currentTarget).parent().remove();
+        else
+            $(e.currentTarget).parent().find('input').val('');
+        todo_changed = true;
+    })
+
+
+</script>

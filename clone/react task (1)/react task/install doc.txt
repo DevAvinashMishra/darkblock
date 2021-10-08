@@ -1,0 +1,20 @@
+## Install
+
+**Back-end**
+**Install**
+1. git clone the repo
+2. `npm i -g http-server`
+3. `cd server`
+4. `npm install`
+
+npm i -g http-server    
+Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
+http-server -c-1
+
+http-server -c-1
+
+To run the back-end `/server`: `npm start` or `nodemon`
+**To run the back-end** `/server`: `npm start` or `nodemon`
+
+To run front-end `/`: `http-server -c-1`  (with disabled cache)
+**To run front-end** `/`: `http-server -c-1`  (with disabled cache)
